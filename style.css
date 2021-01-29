@@ -40,8 +40,6 @@ body {
   margin: auto;
 }
 
-
-
 /* Titles  ===================*/
 h2 {
   margin-top:3.2rem;
@@ -134,6 +132,13 @@ header {
   margin-bottom: 2rem;
 
   color:var(--dark-blue);
+  box-shadow: 3px 3px 15px rgba(0,0,0,0.3);
+
+  transition: all .5s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
 }
 
 .card h3 {
@@ -153,9 +158,25 @@ header {
   margin-top: 1rem;
 }
 
-.card.total {
+#total.positivado {
   background: var(--green);
+  color: #fff; 
+}
+
+#total.negativado {
+  background: var(--red);
   color: #fff;
+}
+
+
+.imgTotal {
+  background: #363f5f;
+  border-radius: 50%;
+}
+
+.imgTotal.color{
+  background: none;
+  border-radius: none;
 }
 
 /* Table  ===================*/
@@ -215,12 +236,17 @@ td.expense{
   color: var(--red);
 }
 
+img.remove {
+  cursor: pointer;
+}
+
 /* Footer  ===================*/
 footer {
   text-align: center;
   padding: 4rem 0 2rem;
   color: var(--dark-blue);
   opacity: 0.6;
+  z-index: -1;
 }
 
 /*RESPONSIVE -------------------------------- */
@@ -252,6 +278,8 @@ footer {
 
   opacity: 0;
   visibility: hidden;
+
+  z-index: 5;
 }
 
 .modal-overlay.active {
@@ -292,7 +320,9 @@ input {
 }
 
 .input-group small {
-  opacity: 0.4;
+  opacity: 0.7;
+  color:#0066ac;
+  
 }
 
 .input-group.actions {
