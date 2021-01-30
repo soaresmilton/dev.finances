@@ -244,9 +244,12 @@ img.remove {
 footer {
   text-align: center;
   padding: 4rem 0 2rem;
-  color: var(--dark-blue);
-  opacity: 0.6;
+  color: rgba(54, 63, 95, 0.6);
   z-index: -1;
+}
+
+footer img.smCode {
+  height: 1.7rem;
 }
 
 /*RESPONSIVE -------------------------------- */
